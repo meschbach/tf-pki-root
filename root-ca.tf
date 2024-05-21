@@ -5,6 +5,7 @@ resource "tls_private_key" "root_ca" {
 
 resource "tls_self_signed_cert" "root_ca" {
   allowed_uses = [
+    "digital_signature",
     "cert_signing",
     "crl_signing"
   ]
